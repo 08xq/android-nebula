@@ -107,7 +107,7 @@ public class NativeNuiUtils {
 
     public void initNui(Context context){
         String appKey = "Evv1sLorgzbE6Kxk";
-        String token = "4aeb975ef34d4a6cb71a8f1e6e0e9d8e";
+        String token = "";
         String deviceId = "ZOidHJOn/DkDAKxM7roiPxOb";
 
         initAndCheckPermission(appKey,token,deviceId,null,context);
