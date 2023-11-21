@@ -17,6 +17,7 @@ import com.mpaas.demo.nebula.MyJSApiPlugin;
 import com.mpaas.demo.nebula.NebulaAppActivity;
 import com.mpaas.demo.nebula.OnlineActivity;
 import com.mpaas.demo.nebula.PresetAmrPipeline;
+import com.mpaas.demo.utils.nui.NativeNuiUtils;
 import com.mpaas.nebula.adapter.api.MPNebula;
 
 public class HomeActivity extends Activity {
@@ -71,7 +72,8 @@ public class HomeActivity extends Activity {
         findViewById(R.id.btn_customized_config).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, CustomizeActivity.class));
+//                startActivity(new Intent(HomeActivity.this, CustomizeActivity.class));
+                NativeNuiUtils.getInstance().initNui(v.getContext());
             }
         });
 

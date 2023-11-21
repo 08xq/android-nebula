@@ -4,6 +4,7 @@
     <style name="AppThemeNew" parent="android:Theme.Light">
         <item name="android:windowNoTitle">true</item>
         <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:windowBackground">@color/h5_provider_bg</item>
     </style>
 
     <style name="h5_wb_progress">

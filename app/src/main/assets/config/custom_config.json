@@ -1,6 +1,14 @@
 [
   {
-    "value": "YES",
+    "value": "NO",
     "key": "h5_shouldverifyapp"
+  },
+  {
+    "value": "0",
+    "key": "TSBS"
+  },
+  {
+    "value": "YES",
+    "key": "h5_open_transparent_bg"
   }
 ]

@@ -4,6 +4,10 @@ if (rootProject.file('./alipay_mavens.gradle').exists()) {
     apply from: './alipay_mavens.gradle'
 }
 buildscript {
+    tasks.withType(JavaCompile) {//解决编码错误: 编码UTF-8的不可映射字
+        options.encoding = "UTF-8"
+    }
+
     repositories {
         mavenLocal()
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
@@ -18,6 +22,7 @@ buildscript {
             url 'http://maven.aliyun.com/nexus/content/repositories/google/'
             name 'aliyun-google'
         }
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
@@ -46,6 +51,8 @@ allprojects {
             url 'http://maven.aliyun.com/nexus/content/repositories/google/'
             name 'aliyun-google'
         }
+
+        maven { url 'https://jitpack.io' }
     }
 }
     

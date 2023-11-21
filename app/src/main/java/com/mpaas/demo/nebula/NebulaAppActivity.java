@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.alipay.mobile.framework.app.ui.BaseActivity;
 import com.mpaas.demo.R;
+import com.mpaas.demo.constants.AppConfig;
 import com.mpaas.nebula.adapter.api.MPNebula;
 import com.mpaas.nebula.adapter.api.MpaasNebulaUpdateCallback;
 
@@ -49,7 +50,7 @@ public class NebulaAppActivity extends BaseActivity implements View.OnClickListe
                 enableAppVerification();
                 break;
             case R.id.btn_open_app:
-                openApp("70000000");
+                openApp(AppConfig.APP_ID);
                 break;
             case R.id.btn_update_app:
                 updateAllApps();
@@ -61,7 +62,11 @@ public class NebulaAppActivity extends BaseActivity implements View.OnClickListe
     }
 
     private void openApp(String appId) {
-        MPNebula.startApp(appId);
+        Bundle bundle = new Bundle();
+//        bundle.putBoolean(H5Param.TRANSPARENT, true);
+        int backgroundColor = getColor(R.color.h5_provider_bg);
+        bundle.putInt("backgroundColor",backgroundColor);
+        MPNebula.startApp(appId,bundle);
     }
 
     private void updateApp(String appid) {

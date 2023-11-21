@@ -2,6 +2,7 @@ package com.mpaas.demo.nebula;
 
 import com.alipay.mobile.nebula.appcenter.H5PresetPkg;
 import com.alipay.mobile.nebula.provider.H5AppCenterPresetProvider;
+import com.mpaas.demo.constants.AppConfig;
 
 import java.io.InputStream;
 import java.util.HashSet;
@@ -16,7 +17,7 @@ public class H5AppCenterPresetProviderImpl implements H5AppCenterPresetProvider 
     @Override
     public Set<String> getCommonResourceAppList() {
         Set<String> appIdList = new HashSet<String>();
-        appIdList.add("77777777");
+        appIdList.add(AppConfig.APP_ID);
         return appIdList;
     }
 

@@ -12,6 +12,8 @@ import java.lang.reflect.Method;
 
 public class MyApplication extends Application {
 
+    public static Context application;
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
@@ -25,6 +27,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        application = this;
         MultiDex.install(this);
         QuinoxlessFramework.init();
 
